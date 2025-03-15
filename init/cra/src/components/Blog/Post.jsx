@@ -1,4 +1,6 @@
-import Comments from "./Comments";
+import Comments from "./Comment/CommentList";
+import Author from "./Author";
+import CommentList from "./Comment/CommentList";
 
 const Post = ({post}) => {
     const handleClick = () => {
@@ -8,13 +10,10 @@ const Post = ({post}) => {
         <>
             <div className="card">
                 <h3>{post.title}</h3>
-                <div className="author">
-                    <h4>{post.author.name}</h4>
-                    <p>{post.author.bio}</p>
-                </div>
                 <p>{post.content}</p>
 
-                <Comments comments={post.comments} />
+                <Author author={post.author}/>
+                <CommentList comments={post.comments}/>
 
                 <button onClick={handleClick}>Read More..</button>
             </div>

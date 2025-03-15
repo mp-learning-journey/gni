@@ -5,6 +5,8 @@ import Person from "./components/Person";
 import PersonDestructured from "./components/PersonDestructured";
 import ProfileWithProps from "./components/ProfileWithProps";
 import Blog from "./components/Blog/Blog";
+import {Counter} from "./components/HooksAndEvents/Counter";
+import {RegistrationForm} from "./components/HooksAndEvents/RegistrationForm";
 
 function App () {
 
@@ -30,7 +32,9 @@ function App () {
             {/*<Person name="Shola" age={20} location="Owerri, Nigeria" />*/}
             {/*<PersonDestructured age={18} location="Lagos, Nigeria" />*/}
 
-            <Blog />
+            {/*<Blog />*/}
+            {/*<Counter />*/}
+            <RegistrationForm />
         </>
     )
 }
