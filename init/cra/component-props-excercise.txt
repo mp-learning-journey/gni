@@ -1,0 +1,48 @@
+1. using the array of users below create a reusable Card component that displays user information. You will use props to pass strings, numbers, objects, and arrays to your component. create a page that displays all user information
+
+[
+  {
+    name: "John Doe",
+    age: 28,
+    address: { city: "New York", country: "USA" },
+    hobbies: ["Reading", "Traveling", "Gaming"],
+  },
+  {
+    name: "Jane Smith",
+    age: 32,
+    address: { city: "London", country: "UK" },
+    hobbies: ["Cooking", "Photography"],
+  },
+  {
+    name: "Carlos Garcia",
+    age: 25,
+    address: { city: "Madrid", country: "Spain" },
+    hobbies: ["Football", "Music", "Coding"],
+  },
+]
+
+2. Create a blog page that list all blog posts with all the information in the data below. ensure to use separate component for author and comment, style it with tailwind css. create a button for each post that says view post, when the user clicks on the post, alert the title of the post
+
+[
+     {
+       id: 1,
+       title: "Understanding React Components",
+       content: "React components are the building blocks of a React application...",
+       author: { name: "Jane Doe", bio: "Frontend Engineer at TechCorp" },
+       comments: [
+         { user: "John", content: "Great article, learned a lot!" },
+         { user: "Alice", content: "Can you explain more about hooks?" },
+       ],
+     },
+     {
+       id: 2,
+       title: "State Management in React",
+       content: "Managing state in large applications can be challenging...",
+       author: { name: "Mike Johnson", bio: "React Developer at WebWorld" },
+       comments: [
+         { user: "Emma", content: "Very insightful, thank you!" },
+         { user: "Lucas", content: "What about Redux integration?" },
+       ],
+     },
+   ];
+

@@ -1,3 +1,15 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+.cards {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 33.1%;
+    border: 1px solid gray;
+    background: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
