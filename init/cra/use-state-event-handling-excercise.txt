@@ -1,0 +1,6 @@
+1. create a simple todo list application that enable users to add to the list, update the list and delete an item from the todo list.
+
+- gat all ite on the list
+- add item to the list
+- remove item from the list
+- delete item from the list

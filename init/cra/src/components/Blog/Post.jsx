@@ -10,10 +10,10 @@ const Post = ({post}) => {
         <>
             <div className="card">
                 <h3>{post.title}</h3>
-                <p>{post.content}</p>
+                <p>{post.body}</p>
 
-                <Author author={post.author}/>
-                <CommentList comments={post.comments}/>
+                {/*<Author author={post.author}/>*/}
+                {/*<CommentList comments={post.comments}/>*/}
 
                 <button onClick={handleClick}>Read More..</button>
             </div>

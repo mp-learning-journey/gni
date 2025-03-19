@@ -1,29 +1,32 @@
-import {comment} from "postcss";
 import Post from "./Post";
+import {useEffect, useState} from "react";
 
 const Blog = () => {
-    const posts = [
-        {
-            id: 1,
-            title: "Understanding React Components",
-            content: "React components are the building blocks of a React application...",
-            author: { name: "Jane Doe", bio: "Frontend Engineer at TechCorp" },
-            comments: [
-                { user: "John", content: "Great article, learned a lot!" },
-                { user: "Alice", content: "Can you explain more about hooks?" },
-            ],
-        },
-        {
-            id: 2,
-            title: "State Management in React",
-            content: "Managing state in large applications can be challenging...",
-            author: { name: "Mike Johnson", bio: "React Developer at WebWorld" },
-            comments: [
-                { user: "Emma", content: "Very insightful, thank you!" },
-                { user: "Lucas", content: "What about Redux integration?" },
-            ],
-        },
-    ];
+    const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(false);
+
+    async function fetchPosts() {
+        try {
+            setLoading(true);
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+
+            const posts = await response.json();
+            setPosts(posts);
+        }
+        catch (e) {
+            console.log(e);
+        }
+        finally {
+            setLoading(false);
+        }
+
+    }
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    if(loading) return <h3>Loading.......</h3>;
 
     return (
         // list of posts
@@ -31,7 +34,7 @@ const Blog = () => {
             <h1>All Blog Posts</h1>
             <div className="cards">
                 {
-                    posts.map((post, index) => (
+                    posts && posts.map((post, index) => (
                         <Post key={index} post={post} />
                     ))
                 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Profile from "./components/Profile";
 import ProfileClass from "./components/ProfileClass";
 import Person from "./components/Person";
@@ -7,12 +7,14 @@ import ProfileWithProps from "./components/ProfileWithProps";
 import Blog from "./components/Blog/Blog";
 import {Counter} from "./components/HooksAndEvents/Counter";
 import {RegistrationForm} from "./components/HooksAndEvents/RegistrationForm";
+import Users from "./components/HooksAndEvents/Users";
 
 function App () {
 
     function handleGreet() {
         alert("Good Evening")
     }
+
     return (
         <>
             {/*<h1>Hello World Class Component</h1>*/}
@@ -34,7 +36,8 @@ function App () {
 
             {/*<Blog />*/}
             {/*<Counter />*/}
-            <RegistrationForm />
+            {/*<RegistrationForm />*/}
+            <Users />
         </>
     )
 }

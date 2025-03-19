@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .image {
+            width: 25%;
+            display: flex;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .flex {
+            width: 100%;
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        * {
+            border: 1px solid red;
+        }
+
+        .img-2 {
+            position: absolute;
+            width: 50%;
+            top: 93px;
+        }
+
+        .relative {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div><img src="https://usevynture.com/_next/static/media/logo.84795a13.svg" /></div>
+        <div>
+            <a>Home</a>
+            <a>About</a>
+        </div>
+        <div><button>Get Started</button></div>
+    </header>
+    <div class="flex justify-center relative">
+        <div class="image">
+            <img src="https://usevynture.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpotrait1.b6803b9b.png&w=1080&q=75" />
+        </div>
+
+        <div class="img-2">
+            <img src="https://usevynture.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flandscape2.b9a6ca8c.png&w=1920&q=75" />
+        </div>
+    </div>
+</body>
+</html>

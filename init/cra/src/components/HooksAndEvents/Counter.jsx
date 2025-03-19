@@ -1,8 +1,14 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const Counter = () => {
     const [count, setCount] = useState(0);
     const [toggle, setToggle] = useState(0);
+
+    useEffect(() => {
+        // send request to backend
+        alert("useEffect")
+    },[])
+
     function handlePlus () {
         setCount(count + 1);
     }
