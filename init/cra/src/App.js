@@ -8,6 +8,8 @@ import Blog from "./components/Blog/Blog";
 import {Counter} from "./components/HooksAndEvents/Counter";
 import {RegistrationForm} from "./components/HooksAndEvents/RegistrationForm";
 import Users from "./components/HooksAndEvents/Users";
+import UserProfile from "./components/PropDrilling/UserProfile";
+import {UserProvider} from "./components/ContextAPI/UserProvider";
 
 function App () {
 
@@ -16,7 +18,7 @@ function App () {
     }
 
     return (
-        <>
+        <UserProvider>
             {/*<h1>Hello World Class Component</h1>*/}
             {/*<ProfileClass/>*/}
 
@@ -37,8 +39,9 @@ function App () {
             {/*<Blog />*/}
             {/*<Counter />*/}
             {/*<RegistrationForm />*/}
-            <Users />
-        </>
+            {/*<Users />*/}
+            <UserProfile />
+        </UserProvider>
     )
 }
 
