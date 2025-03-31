@@ -10,6 +10,7 @@ import {RegistrationForm} from "./components/HooksAndEvents/RegistrationForm";
 import Users from "./components/HooksAndEvents/Users";
 import UserProfile from "./components/PropDrilling/UserProfile";
 import {UserProvider} from "./components/ContextAPI/UserProvider";
+import ThemeProvider, {useTheme} from "./components/ContextAPI/ThemeProvider";
 
 function App () {
 
@@ -18,7 +19,9 @@ function App () {
     }
 
     return (
-        <UserProvider>
+        <ThemeProvider>
+            <UserProvider>
+
             {/*<h1>Hello World Class Component</h1>*/}
             {/*<ProfileClass/>*/}
 
@@ -39,9 +42,11 @@ function App () {
             {/*<Blog />*/}
             {/*<Counter />*/}
             {/*<RegistrationForm />*/}
-            {/*<Users />*/}
-            <UserProfile />
-        </UserProvider>
+                <Users />
+                <hr />
+                <UserProfile />
+            </UserProvider>
+        </ThemeProvider>
     )
 }
 

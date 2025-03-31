@@ -1,0 +1,42 @@
+In this assignment, you will build a fully functional To-Do List application using React Context API for global state management. The goal is to help you understand how to share state across multiple components without prop drilling.
+
+Task Requirements
+Create a new React project (you can use Vite or Create React App).
+
+Use Context API to manage the to-do list state globally.
+
+The application should include the following features:
+
+Add new tasks
+
+Display a list of tasks
+
+Mark tasks as completed (strike-through effect)
+
+Delete tasks from the list
+
+At least 5 components should be created:
+
+TodoProvider.jsx – Manages global state
+
+TodoForm.jsx – Handles adding new tasks
+
+TodoList.jsx – Displays the list of tasks
+
+TodoItem.jsx – Represents a single task
+
+App.jsx – The main entry point that connects everything
+
+All components must consume data from Context API instead of using props.
+
+Use functional components and hooks (useState, useContext) only.
+
+🔎 Example User Flow
+The user enters a task in an input field and clicks "Add Task".
+
+The new task appears in the list below.
+
+Clicking on a task toggles its completion state (adds a strike-through).
+
+Clicking a "Delete" button removes the task from the list.
+

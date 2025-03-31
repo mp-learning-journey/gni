@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from "react";
+import {useTheme} from "../ContextAPI/ThemeProvider";
 
 const Users = () => {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1)
+
+    const {theme} = useTheme();
+
     const fetchUsers = async () => {
         try {
             setLoading(true)
-            const response = await fetch(`https://jsonplaceholder.typicode.com/users?page=${page}&limit=2`);
+            const response = await fetch(`https://jsonplaceholder.typicode.com/users?_page=${page}&_limit=2`);
             const data = await response.json();
             setUsers(data);
         }catch (e) {
@@ -46,7 +50,12 @@ const Users = () => {
                 )))
             }
 
-            <button onClick={() => setPage(page - 1)}>Prev</button>
+            <button
+                style={{
+                backgroundColor: theme === 'light' ? "black" : 'white',
+                color: theme !== 'light' ? "black" : 'white'
+                }}
+                onClick={() => setPage(page - 1)}>Prev</button>
 
             {page}
 
