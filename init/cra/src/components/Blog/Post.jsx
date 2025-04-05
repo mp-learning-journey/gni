@@ -1,11 +1,10 @@
 import Comments from "./Comment/CommentList";
 import Author from "./Author";
 import CommentList from "./Comment/CommentList";
+import {NavLink} from "react-router-dom";
 
 const Post = ({post}) => {
-    const handleClick = () => {
-        alert(post.title);
-    }
+
     return (
         <>
             <div className="card">
@@ -15,7 +14,7 @@ const Post = ({post}) => {
                 {/*<Author author={post.author}/>*/}
                 {/*<CommentList comments={post.comments}/>*/}
 
-                <button onClick={handleClick}>Read More..</button>
+                <NavLink to={"/posts/" + post.id}>Read More..</NavLink>
             </div>
         </>
     )

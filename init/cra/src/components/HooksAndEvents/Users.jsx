@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useTheme} from "../ContextAPI/ThemeProvider";
+import NavBar from "../pages/NavBar";
 
 const Users = () => {
     const [users, setUsers] = useState([])
@@ -38,6 +39,7 @@ const Users = () => {
 
     return (
         <>
+            <NavBar />
             <h2 id='heading'>All Users</h2>
             {
                 users && (users.map(user => (
