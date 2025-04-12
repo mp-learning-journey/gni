@@ -11,7 +11,10 @@ const NavBar = () => {
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                 <li><NavLink to="/profile">Profile</NavLink></li>
-                <li><button onClick={handleGetStarted}>Get Started</button></li>
+                <li><NavLink to="/redux">Redux</NavLink></li>
+                <li>
+                    <button onClick={handleGetStarted}>Get Started</button>
+                </li>
             </ul>
         </>
     )
