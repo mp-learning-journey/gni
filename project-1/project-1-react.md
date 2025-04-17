@@ -26,3 +26,4 @@ Create an ecommerce website that enables user to purchase a product through chec
 - only logged-in users should be able to order or add to cart
 - prompt guests to login when they try to add item to cart
 - use react router, redux and redux-toolkit, use localstorage to persist data
+- use `tailwind css` for styling
