@@ -19,8 +19,10 @@ Create an ecommerce website that enables user to purchase a product through chec
 - enable user to view, update and delete cart item
 - enable user to check out, when user checkout, automatically create an order 
 - display user orders on their dashboard
+- Add 404 page
 - Add any other features
 
 ### Criteria:
 - only logged-in users should be able to order or add to cart
 - prompt guests to login when they try to add item to cart
+- use react router, redux and redux-toolkit, use localstorage to persist data
