@@ -12,6 +12,8 @@ const NavBar = () => {
                 <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                 <li><NavLink to="/profile">Profile</NavLink></li>
                 <li><NavLink to="/redux">Redux</NavLink></li>
+                <li><NavLink to="/posts">Posts</NavLink></li>
+
                 <li>
                     <button onClick={handleGetStarted}>Get Started</button>
                 </li>

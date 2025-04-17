@@ -9,6 +9,7 @@ import ReduxPage from "./pages/ReduxPage";
 import {Provider} from "react-redux";
 import store from "./redux-toolkit/stroe";
 import CartPage from "./pages/CartPage";
+import PostPage from "./pages/PostPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             </Route>
               <Route path={"/redux"} element={<ReduxPage />}/>
               <Route path={"/cart"} element={<CartPage />}/>
+              <Route path={"/posts"} element={<PostPage />}/>
             <Route path={"/login"} element={<Login />}/>
             <Route path={"/Register"} element={<Register />}/>
 
