@@ -2,9 +2,6 @@ import React from "react";
 import About from "./components/pages/About";
 import {Route, Routes} from "react-router-dom";
 import Home from "./components/pages/Home";
-import Users from "./components/HooksAndEvents/Users";
-import ThemeProvider from "./components/ContextAPI/ThemeProvider";
-import UserProfile from "./components/PropDrilling/UserProfile";
 import Blog from "./components/Blog/Blog";
 import SinglePost from "./components/pages/SinglePost";
 
